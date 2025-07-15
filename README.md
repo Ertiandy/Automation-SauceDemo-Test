@@ -23,7 +23,9 @@ src
 
 
 **Cara Menjalankan**
-**1. Clone Repositori**
+
+
+1. Clone Repositori
 ```bash
 git clone https://github.com/Ertiandy/Automation-SauceDemo-Test.git
 cd Automation-SauceDemo-Test

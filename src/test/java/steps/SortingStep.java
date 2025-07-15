@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.SortingPage;
+import static org.junit.Assert.assertTrue;
+
 
 public class SortingStep {
 
@@ -32,18 +34,41 @@ public class SortingStep {
 
     @When("I click filter by {string}")
     public void iClickFilterBy(String filter) {
-        Sorting.selectFilterBy(filter); // Sekarang parameternya digunakan
+        Sorting.selectFilterBy(filter);
+        delay ();
     }
+
 
     @Then("Product filtered by {string}")
-    public void productFilteredBy(String arg0, String arg1) {
+    public void productFilteredBy(String filterName) {
+        boolean isSorted = false;
+
+        switch (filterName) {
+            case "Price (low to high)":
+                isSorted = Sorting.isSortedByLowToHighPrice();
+                break;
+            case "Price (high to low)":
+                isSorted = Sorting.isSortedByHighToLowPrice();
+                break;
+            case "Name (A to Z)":
+                isSorted = Sorting.isSortedByNameAToZ();
+                break;
+            case "Name (Z to A)":
+                isSorted = Sorting.isSortedByNameZToA();
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported filter: " + filterName);
+        }
+
+        assertTrue("Produk tidak terurut sesuai filter: " + filterName, isSorted);
+        driver.quit();
     }
 
-    private void delay() {
+    private void delay() { //setting delay
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // restore interrupted status
+            Thread.currentThread().interrupt(); //
             e.printStackTrace();
         }
     }

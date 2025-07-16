@@ -13,11 +13,11 @@ Feature: Login Feature
     And user input username with "invalid_user"
     And user input password with "wrong_password"
     When user click login button
-    Then user is on homepage
+    Then user is on login page
 
   Scenario: Boundary login (empty username and password)
     Given user is on login page
     And user input username with ""
     And user input password with ""
     When user click login button
-    Then user is on homepage
+    Then user is on login page

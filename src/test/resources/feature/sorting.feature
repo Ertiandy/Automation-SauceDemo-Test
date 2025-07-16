@@ -1,4 +1,4 @@
-Feature: deleting item and continue shopping
+Feature: Sorting Item
 
   Scenario Outline: sorting item
     Given I already Logged in

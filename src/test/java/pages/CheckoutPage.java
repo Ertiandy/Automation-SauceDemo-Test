@@ -2,20 +2,26 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class CheckoutPage {
 
-    WebDriver driver;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+
 
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void clickAddToChart() {
+    public void clickAddToCart() {
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
     }
 
-    public void clickChartButton() {
+    public void clickCartButton() {
         driver.findElement(By.xpath ("//*[@id=\"shopping_cart_container\"]/a")).click ();
     }
 
@@ -32,7 +38,7 @@ public class CheckoutPage {
     }
 
     public void InputZipCode(String postalCode) {
-        driver.findElement (By.id ("postal-code")).sendKeys (postalCode);
+        driver.findElement (By.xpath ("//*[@id=\"postal-code\"]")).sendKeys (postalCode);
     }
 
     public void clickContinue() {

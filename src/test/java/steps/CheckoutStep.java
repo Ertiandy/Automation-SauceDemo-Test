@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.en.*;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import pages.CheckoutPage;
 import pages.LoginPage;
@@ -12,6 +13,13 @@ public class CheckoutStep {
     WebDriver driver = Hooks.driver;
     LoginPage loginPage = new LoginPage(driver);
     CheckoutPage checkout = new CheckoutPage(driver);
+
+    @Before
+    public void initPages() {
+        driver = Hooks.driver;
+        loginPage = new LoginPage(driver);
+        checkout = new CheckoutPage(driver);
+    }
 
     @Given("user is already on homepage")
     public void userIsAlreadyOnHomepage() {

@@ -1,4 +1,3 @@
-
 package steps;
 
 import io.cucumber.junit.Cucumber;
@@ -7,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    glue = {"steps"},
-    features = {"src/test/resources/feature"},
-    plugin = {"pretty"}
+        features = "src/test/resources/feature",
+        glue = "steps",
+        plugin = {"pretty", "html:target/cucumber-reports.html"},
+        monochrome = true
 )
 public class CucumberTest {
 }

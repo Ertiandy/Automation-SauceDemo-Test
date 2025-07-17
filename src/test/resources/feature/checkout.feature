@@ -12,9 +12,3 @@ Feature: Checkout
     Then user is on checkout overview page
     And user click finish button
     Then user is on checkout finish page
-
-#    Examples:
-#      | NamaPertama | NamaTerakhir | ZIPCode |
-#      | budi        | anduk        | 123456  |
-#      | budi2       | anduk1       | 123416  |
-#      | budi3       | anduk2       | 123426  |

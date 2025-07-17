@@ -22,15 +22,24 @@ jobs:
       - name: Grant gradlew execute permission
         run: chmod +x gradlew
 
-      - name: Install latest Chrome version
+      - name: Install latest stable Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y wget gnupg unzip curl
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" \
             | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
       - name: Run tests
         run: ./gradlew test
+
+      - name: Run tests with Allure
+        run: ./gradlew clean test allureReport
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: build/reports/allure-report

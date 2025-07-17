@@ -1,6 +1,7 @@
 
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 repositories {
@@ -20,4 +21,13 @@ dependencies {
 
 test {
     useJUnit()
+}
+
+allure {
+    version = '2.24.0'
+    useJUnit4 {
+        version = '2.24.0'
+    }
+    autoconfigure = true
+    aspectjweaver = true
 }

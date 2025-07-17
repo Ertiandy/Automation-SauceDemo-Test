@@ -46,6 +46,5 @@ public class LoginStep {
     @Then("user is on homepage")
     public void userIsOnHomepage() {
         assertEquals("https://www.saucedemo.com/inventory.html", loginPage.getUrl());
-        driver.quit();
     }
 }

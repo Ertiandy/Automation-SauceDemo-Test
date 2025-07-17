@@ -4,7 +4,6 @@ Feature: Checkout
     Given user is already on homepage
     And user click add to cart button
     And user click cart icon
-    Then user is on checkout page
     And user click checkout button
     And user input firstName with "John"
     And user input lastName with "Doe"

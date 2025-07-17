@@ -1,32 +1,28 @@
-
 package steps;
 
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.LoginPage;
-import static org.junit.Assert.*;
 
-import java.time.Duration;
+import static org.junit.Assert.*;
 
 public class LoginStep {
 
     WebDriver driver;
     LoginPage loginPage;
 
-
     @Given("user is on login page")
     public void userIsOnLoginPage() {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+        options.addArguments("--headless=new"); // gunakan Chrome headless di CI
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
         loginPage.openLoginPage();
     }
@@ -46,21 +42,9 @@ public class LoginStep {
         loginPage.clickLogin();
     }
 
-
-
     @Then("user is on homepage")
     public void userIsOnHomepage() {
-        assertEquals ("https://www.saucedemo.com/inventory.html", loginPage.getUrl ());
-        try {
-            Thread.sleep(3000); // buat delay
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        assertEquals("https://www.saucedemo.com/inventory.html", loginPage.getUrl());
         driver.quit();
     }
-
-
-
-
-
 }

@@ -22,9 +22,9 @@ public class CheckoutStep {
 
     @Given("user is already on homepage")
     public void userIsAlreadyOnHomepage() {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+        options.addArguments("--headless=new"); // gunakan Chrome headless di CI
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver(options);

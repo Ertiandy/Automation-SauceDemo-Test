@@ -30,9 +30,7 @@ jobs:
       
 
       - name: Setup ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-        with:
-          chromedriver-version: latest
+        uses: browser-action/setup-chrome@v0.0.0
 
       - name: Set permission to Gradle wrapper
         run: chmod +x ./gradlew

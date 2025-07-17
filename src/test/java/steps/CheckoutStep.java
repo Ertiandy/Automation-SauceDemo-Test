@@ -1,47 +1,27 @@
 package steps;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CheckoutPage;
 import pages.LoginPage;
-import static org.junit.Assert.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
+import static org.junit.Assert.*;
 
 public class CheckoutStep {
 
-    WebDriver driver;
-    LoginPage loginPage;
-    CheckoutPage checkout;
+    WebDriver driver = Hooks.driver;
+    LoginPage loginPage = new LoginPage(driver);
+    CheckoutPage checkout = new CheckoutPage(driver);
 
     @Given("user is already on homepage")
     public void userIsAlreadyOnHomepage() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        System.out.println("ChromeDriver has been set up");
-        options.addArguments("--headless=new");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-popup-blocking");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--disable-infobars");
-
-
-        driver = new ChromeDriver(options);
-        loginPage = new LoginPage(driver);
-        checkout = new CheckoutPage(driver);
-
         loginPage.openLoginPage();
         loginPage.enterUsername("standard_user");
         loginPage.enterPassword("secret_sauce");
         loginPage.clickLogin();
-        delay();
+
+        // Verifikasi login berhasil
+        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl());
     }
 
     @And("user click add to cart button")
@@ -54,16 +34,9 @@ public class CheckoutStep {
         checkout.clickCartButton();
     }
 
-    @Then("user is on checkout page")
-    public void userIsOnCheckoutPage() {
-        driver.getCurrentUrl();
-    delay();
-    }
-
     @And("user click checkout button")
     public void userClickCheckoutButton() {
         checkout.ClickCheckoutButton();
-        delay();
     }
 
     @And("user input firstName with {string}")
@@ -79,7 +52,6 @@ public class CheckoutStep {
     @And("user input ZipCode with {string}")
     public void userInputZipCodeWith(String postalcode) {
         checkout.InputZipCode(postalcode);
-        delay();
     }
 
     @When("user click continue button")
@@ -95,21 +67,10 @@ public class CheckoutStep {
     @And("user click finish button")
     public void userClickFinishButton() {
         checkout.clickFinish();
-        delay();
     }
 
     @Then("user is on checkout finish page")
     public void userIsOnCheckoutFinishPage() {
         assertTrue(driver.getPageSource().contains("Thank you for your order"));
-        driver.quit();
-    }
-
-    private void delay() { //setting delay
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            e.printStackTrace();
-        }
     }
 }

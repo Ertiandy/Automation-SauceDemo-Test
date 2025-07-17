@@ -23,7 +23,7 @@ public class LoginStep {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-        driver = new ChromeDriver(options);
+        WebDriver driver = Hooks.driver;
         loginPage = new LoginPage(driver);
         loginPage.openLoginPage();
     }

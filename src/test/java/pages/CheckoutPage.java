@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -11,43 +13,48 @@ public class CheckoutPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void clickAddToCart() {
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-sauce-labs-backpack")));
+        button.click();
     }
 
     public void clickCartButton() {
-        driver.findElement(By.xpath ("//*[@id=\"shopping_cart_container\"]/a")).click ();
+        WebElement cart = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#shopping_cart_container a")));
+        cart.click();
     }
 
-    public void ClickCheckoutButton(){
-        driver.findElement(By.id("checkout")).click();
+    public void ClickCheckoutButton() {
+        WebElement checkoutBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout")));
+        checkoutBtn.click();
     }
 
     public void InputFirstName(String firstName) {
-        driver.findElement(By.id("first-name")).sendKeys(firstName);
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first-name")));
+        input.sendKeys(firstName);
     }
 
     public void InputLastName(String lastName) {
-        driver.findElement(By.id("last-name")).sendKeys(lastName);
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("last-name")));
+        input.sendKeys(lastName);
     }
 
     public void InputZipCode(String postalCode) {
-        driver.findElement (By.xpath ("//*[@id=\"postal-code\"]")).sendKeys (postalCode);
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("postal-code")));
+        input.sendKeys(postalCode);
     }
 
     public void clickContinue() {
-        driver.findElement(By.id("continue")).click();
+        WebElement continueBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("continue")));
+        continueBtn.click();
     }
 
     public void clickFinish() {
-        driver.findElement(By.id("finish")).click();
+        WebElement finishBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("finish")));
+        finishBtn.click();
     }
 }
-
- 

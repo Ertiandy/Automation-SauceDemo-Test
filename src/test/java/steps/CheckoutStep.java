@@ -28,6 +28,7 @@ public class CheckoutStep {
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
         checkout = new CheckoutPage(driver);

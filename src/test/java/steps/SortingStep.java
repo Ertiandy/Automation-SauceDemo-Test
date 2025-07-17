@@ -27,6 +27,7 @@ public class SortingStep {
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver ();
         loginPage = new LoginPage(driver);
         Sorting = new SortingPage(driver);

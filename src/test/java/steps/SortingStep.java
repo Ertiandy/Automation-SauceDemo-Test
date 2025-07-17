@@ -22,8 +22,9 @@ public class SortingStep {
     @Given("I already Logged in")
     public void userIsAlreadyOnHomepage() {
         WebDriverManager.chromedriver().setup();
+        System.out.println("ChromeDriver has been set up");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // gunakan Chrome headless di CI
+        options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver ();

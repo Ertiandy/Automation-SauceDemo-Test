@@ -24,7 +24,8 @@ public class CheckoutStep {
     public void userIsAlreadyOnHomepage() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // gunakan Chrome headless di CI
+        System.out.println("ChromeDriver has been set up");
+        options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver(options);

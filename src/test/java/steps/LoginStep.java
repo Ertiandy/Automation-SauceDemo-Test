@@ -17,8 +17,9 @@ public class LoginStep {
     @Given("user is on login page")
     public void userIsOnLoginPage() {
         WebDriverManager.chromedriver().setup();
+        System.out.println("ChromeDriver has been set up");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // gunakan Chrome headless di CI
+        options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 

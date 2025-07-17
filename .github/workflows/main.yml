@@ -22,7 +22,7 @@ jobs:
       - name: Grant gradlew execute permission
         run: chmod +x gradlew
 
-      - name: Install compatible Chrome version
+      - name: Install latest Chrome version
         run: |
           sudo apt-get update
           sudo apt-get install -y wget gnupg unzip curl
@@ -30,7 +30,7 @@ jobs:
           echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
             | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable=117.0.5938.132-1
+          sudo apt-get install -y google-chrome-stable
 
       - name: Run tests
         run: ./gradlew test

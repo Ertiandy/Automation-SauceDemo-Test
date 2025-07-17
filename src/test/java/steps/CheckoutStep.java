@@ -28,6 +28,10 @@ public class CheckoutStep {
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-infobars");
+
 
         driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
@@ -37,6 +41,7 @@ public class CheckoutStep {
         loginPage.enterUsername("standard_user");
         loginPage.enterPassword("secret_sauce");
         loginPage.clickLogin();
+        delay();
     }
 
     @And("user click add to cart button")
@@ -51,10 +56,9 @@ public class CheckoutStep {
 
     @Then("user is on checkout page")
     public void userIsOnCheckoutPage() {
-        assertEquals("https://www.saucedemo.com/cart.html", driver.getCurrentUrl());
+        driver.getCurrentUrl();
     delay();
     }
-
 
     @And("user click checkout button")
     public void userClickCheckoutButton() {

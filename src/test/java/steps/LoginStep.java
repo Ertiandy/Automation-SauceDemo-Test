@@ -20,7 +20,7 @@ public class LoginStep {
 
     @Given("user is on login page")
     public void userIsOnLoginPage() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");

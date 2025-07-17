@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CheckoutPage;
 import pages.LoginPage;
 import static org.junit.Assert.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class CheckoutStep {
@@ -21,7 +23,11 @@ public class CheckoutStep {
     @Given("user is already on homepage")
     public void userIsAlreadyOnHomepage() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
         checkout = new CheckoutPage(driver);
 

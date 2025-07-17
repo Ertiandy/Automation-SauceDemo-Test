@@ -20,19 +20,27 @@ jobs:
           java-version: '17'
           distribution: 'temurin'      
 
-      - name: Install Google Chrome
+
+      - name: Install Chrome
         run: |
-            sudo apt update
-            sudo apt install -y wget unzip xvfb
-            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-            sudo apt install -y ./google-chrome-stable_current_amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
-
-      - name: Set permission to Gradle wrapper
-        run: chmod +x ./gradlew
+      - name: Setup ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | grep -oP "\d+\.\d+\.\d+\.\d+")
+          wget -N https://chromedriver.storage.googleapis.com/$(echo $CHROME_VERSION | cut -d. -f1-3)/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv -f chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
 
       - name: Run tests (headless Chrome)
         run: ./gradlew test
+
+      - name: Set permission to Gradle wrapper
+        run: chmod +x ./gradlew
 
       - name: Upload test report
         if: always()

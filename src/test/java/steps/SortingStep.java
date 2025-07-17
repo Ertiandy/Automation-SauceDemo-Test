@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.SortingPage;
@@ -21,6 +22,10 @@ public class SortingStep {
     @Given("I already Logged in")
     public void userIsAlreadyOnHomepage() {
         WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver ();
         loginPage = new LoginPage(driver);
         Sorting = new SortingPage(driver);

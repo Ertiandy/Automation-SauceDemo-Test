@@ -91,26 +91,132 @@ allure {
 
 ```
 src
- ├── main/java
- └── test
-     ├── java
-     │   ├── helper
-     │   ├── model
-     │   ├── runner
-     │   ├── stepdefinitions
-     │   └── testlogic
-     └── resources
-         └── features
+└── test
+    ├── java
+    │   ├── api
+    │   │   ├── client
+    │   │   │   └── ApiClient.java
+    │   │   ├── data
+    │   │   │   └── UserData.java
+    │   │   ├── helper
+    │   │   │   └── JsonSchemaValidatorHelper.java
+    │   │   ├── pojo
+    │   │   │   ├── CreateUserRequest.java
+    │   │   │   └── UpdateUserRequest.java
+    │   │   ├── steps
+    │   │   │   └── ApiUserStep.java
+    │   │   └── utils
+    │   │       └── ScenarioContext.java
+    │   ├── hooks
+    │   │   └── Hooks.java
+    │   └── web
+    │       ├── pages
+    │       │   ├── CheckoutPage.java
+    │       │   ├── LoginPage.java
+    │       │   └── SortingPage.java
+    │       └── steps
+    │           ├── CheckoutStep.java
+    │           ├── LoginStep.java
+    │           └── SortingStep.java
+    └── resources
+        ├── feature
+        │   ├── api
+        │   │   └── user.feature
+        │   └── web
+        │       ├── checkout.feature
+        │       ├── login.feature
+        │       └── sorting.feature
+        └── schema
+            ├── create_user_schema.json
+            ├── get_user_schema.json
+            ├── get_users_schema.json
+            └── update_user_schema.json
+
 ```
 
 Penjelasan:
 
-* `helper`: utilitas umum dan konfigurasi endpoint/web driver
-* `model`: POJO untuk API/web object
-* `runner`: konfigurasi eksekusi test
-* `stepdefinitions`: implementasi langkah dari Gherkin
-* `testlogic`: logika utama untuk validasi API dan web
-* `features`: file Gherkin (\*.feature)
+📁 src/test
+Folder utama untuk menyimpan semua kode dan resource pengujian (testing).
+
+📂 java
+Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
+
+1. 📂 api → Automation Test untuk API
+📁 client
+Tujuan: Menyimpan class untuk memanggil endpoint API menggunakan Rest Assured.
+
+Contoh:
+ApiClient.java: Fungsi getUserById(), createUser(), dll.
+
+📁 data
+Tujuan: Menyediakan test data atau data dummy untuk request API.
+
+Contoh:
+UserData.java: Static data user untuk create/update.
+
+📁 helper
+Tujuan: Menyediakan helper function untuk API testing.
+
+Contoh:
+JsonSchemaValidatorHelper.java: Validasi response JSON dengan schema.
+
+📁 pojo
+Tujuan: POJO (Plain Old Java Object) untuk memetakan request/response body JSON.
+
+Contoh:
+CreateUserRequest.java, UpdateUserRequest.java
+
+📁 steps
+Tujuan: Step definition untuk skenario Cucumber API.
+
+Contoh:
+ApiUserStep.java: Implementasi langkah-langkah seperti Given, When, Then.
+
+📁 utils
+Tujuan: Reusable utility class.
+
+Contoh:
+ScenarioContext.java: Menyimpan data antar step selama eksekusi.
+
+2. 📂 web → Automation Test untuk Web UI (Selenium)
+📁 pages
+Tujuan: Page Object Model (POM), menyimpan semua locators & action di halaman.
+
+Contoh:
+LoginPage.java, CheckoutPage.java, SortingPage.java
+
+📁 steps
+Tujuan: Step definition untuk skenario Cucumber Web UI.
+
+Contoh:
+LoginStep.java, CheckoutStep.java, SortingStep.java
+
+3. 📁 hooks
+Tujuan: Inisialisasi sebelum dan sesudah test.
+
+Contoh:
+Hooks.java: Inisialisasi dan teardown WebDriver.
+
+📂 resources
+📁 feature
+Tujuan: Menyimpan file skenario Cucumber .feature.
+
+📂 web
+- login.feature: Test login positif & negatif.
+- checkout.feature: Test checkout (lengkap atau error).
+- sorting.feature: Test sorting item.
+
+📂 api
+user.feature: Test Get, Create, Update, Delete user.
+
+📁 schema
+Tujuan: Menyimpan file JSON Schema untuk validasi response API.
+
+Contoh:
+- get_users_schema.json
+- create_user_schema.json
+- update_user_schema.json
 
 ---
 

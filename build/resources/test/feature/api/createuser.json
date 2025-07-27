@@ -1,0 +1,19 @@
+{
+  "title": "mr",
+  "firstName": "Ertiandy",
+  "lastName": "Waluyo",
+  "picture": "https://randomuser.me/api/portraits/med/male/89.jpg",
+  "gender": "male",
+  "email": "ertiandywaluyo@mail.com",
+  "dateOfBirth": "1993-04-09T00:31:57.367Z",
+  "phone": "080989999",
+  "location": {
+    "street": "Jalanin aja dulu",
+    "city": "Depok",
+    "state": "Jawa Barat",
+    "country": "Indonesia",
+    "timezone": "+7:00"
+  },
+  "registerDate": "2025-07-27T21:10:07.872Z",
+  "updatedDate": "2025-07-27T21:10:07.872Z"
+}

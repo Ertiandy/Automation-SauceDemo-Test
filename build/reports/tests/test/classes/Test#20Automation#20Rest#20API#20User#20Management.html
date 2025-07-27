@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Test Automation Rest API User Management</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Test Automation Rest API User Management</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Test Automation Rest API User Management</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">19.290s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Test Get List Data User Normal</td>
+<td class="success">9.640s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test create new user normal</td>
+<td class="success">1.456s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test delete user normal</td>
+<td class="success">2.174s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test delete user with user id not found</td>
+<td class="success">1.290s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test get data profile user failed not found</td>
+<td class="success">1.317s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test get data profile user normal</td>
+<td class="success">1.484s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test update user normal</td>
+<td class="success">1.929s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@api
+Scenario: Test Get List Data User Normal                                     # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:4
+Prepare URL : GET_LIST_USERS
+URL is : https://dummyapi.io/data/v1/user
+  Given prepare url for &quot;GET_LIST_USERS&quot;                                     # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+{&quot;data&quot;:[{&quot;id&quot;:&quot;60d0fe4f5311236168a109ca&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Sara&quot;,&quot;lastName&quot;:&quot;Andersen&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/women/58.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cb&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Edita&quot;,&quot;lastName&quot;:&quot;Vestering&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cc&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Adina&quot;,&quot;lastName&quot;:&quot;Barbosa&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/28.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Roberto&quot;,&quot;lastName&quot;:&quot;Vega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/25.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109ce&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Rudi&quot;,&quot;lastName&quot;:&quot;Droste&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/83.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cf&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Carolina&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/5.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d0&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Emre&quot;,&quot;lastName&quot;:&quot;Asikoglu&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/23.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d1&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Kent&quot;,&quot;lastName&quot;:&quot;Brewer&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/52.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d2&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Carlson&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/80.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d3&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Friedrich-Karl&quot;,&quot;lastName&quot;:&quot;Brand&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/7.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d4&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Valentin&quot;,&quot;lastName&quot;:&quot;Ortega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/3.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d5&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Sibylle&quot;,&quot;lastName&quot;:&quot;Leibold&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d6&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Elisa&quot;,&quot;lastName&quot;:&quot;Lorenzo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d7&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Leevi&quot;,&quot;lastName&quot;:&quot;Savela&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/67.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d8&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Karoline&quot;,&quot;lastName&quot;:&quot;Sviggum&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/61.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d9&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Nuria&quot;,&quot;lastName&quot;:&quot;Leon&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/93.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109da&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Lance&quot;,&quot;lastName&quot;:&quot;Foster&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/13.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109db&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Naomi&quot;,&quot;lastName&quot;:&quot;Rodrigues&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/39.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dc&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Roux&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/59.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Miguel&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/31.jpg&quot;}],&quot;total&quot;:327,&quot;page&quot;:0,&quot;limit&quot;:20}
+  When hit api get list users                                                # api.steps.ApiUserStep.hit_api_get_list_users()
+check status code : 200
+  Then validation status code api user is equals 200                         # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+validation response body list user process
+  Then validation response body get list users                               # api.steps.ApiUserStep.validation_response_body_get_list_users()
+check response data : get_list_user_success.json
+  Then validation response json with JSONSchema &quot;get_list_user_success.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+
+@api
+Scenario: Test get data profile user normal                             # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:12
+Prepare URL : GET_PROFILE_USER
+URL is : https://dummyapi.io/data/v1/user/
+  Given prepare url for &quot;GET_PROFILE_USER&quot;                              # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+Final Endpoint : https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109cd
+{&quot;id&quot;:&quot;60d0fe4f5311236168a109cd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Roberto&quot;,&quot;lastName&quot;:&quot;Vega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/25.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;roberto.vega@example.com&quot;,&quot;dateOfBirth&quot;:&quot;1945-11-17T06:31:57.367Z&quot;,&quot;phone&quot;:&quot;949-368-211&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;7675, Calle Mota&quot;,&quot;city&quot;:&quot;LogroÃ±o&quot;,&quot;state&quot;:&quot;Islas Baleares&quot;,&quot;country&quot;:&quot;Spain&quot;,&quot;timezone&quot;:&quot;+6:00&quot;},&quot;registerDate&quot;:&quot;2021-06-21T21:02:07.872Z&quot;,&quot;updatedDate&quot;:&quot;2021-06-21T21:02:07.872Z&quot;}
+  When hit api get profile user by id &quot;60d0fe4f5311236168a109cd&quot;        # api.steps.ApiUserStep.hitApiGetProfileUserById(java.lang.String)
+check status code : 200
+  Then validation status code api user is equals 200                    # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+validation response body profile user process normal
+  Then validation response body get profile user                        # api.steps.ApiUserStep.validationResponseBodyGetProfileUser()
+check response data : get_user_success.json
+  Then validation response json with JSONSchema &quot;get_user_success.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+
+@api
+Scenario: Test get data profile user failed not found                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:20
+Prepare URL : GET_PROFILE_USER
+URL is : https://dummyapi.io/data/v1/user/
+  Given prepare url for &quot;GET_PROFILE_USER&quot;                            # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+Final Endpoint : https://dummyapi.io/data/v1/user/65bb2ac113492cde6cfbd2d8
+{&quot;error&quot;:&quot;RESOURCE_NOT_FOUND&quot;}
+  When hit api get profile user by id &quot;65bb2ac113492cde6cfbd2d8&quot;      # api.steps.ApiUserStep.hitApiGetProfileUserById(java.lang.String)
+check status code : 404
+  Then validation status code api user is equals 404                  # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+validation response body profile user process failed
+actual message: RESOURCE_NOT_FOUND
+  Then validation response body with message &quot;RESOURCE_NOT_FOUND&quot;     # api.steps.ApiUserStep.validationResponseBodyFailedWithMessage(java.lang.String)
+check response data : get_user_error.json
+  Then validation response json with JSONSchema &quot;get_user_error.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+
+@api
+Scenario: Test create new user normal                              # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:28
+Prepare URL : CREATE_NEW_USER
+URL is : https://dummyapi.io/data/v1/user/create
+  Given prepare url for &quot;CREATE_NEW_USER&quot;                          # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;6885acdec1944b8990699950&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;}
+  When hit api post create new user                                # api.steps.ApiUserStep.hitApiPostCreateNewUser()
+check status code : 200
+  Then validation status code api user is equals 200               # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+test logic for check response body create user
+Actual Data : {&quot;id&quot;:&quot;6885acdec1944b8990699950&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;}
+Test Data : {&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+  Then validation response body post create new user               # api.steps.ApiUserStep.validationResponseBodyPostCreateNewUser()
+check response data : create_user.json
+  Then validation response json with JSONSchema &quot;create_user.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+
+@api
+Scenario: Test update user normal                                                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:36
+Prepare URL : UPDATE_USER
+URL is : https://dummyapi.io/data/v1/user/
+  Given prepare url for &quot;UPDATE_USER&quot;                                             # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;}
+current id after created : 6885acdfc1944b87e2699953
+  And hit api post create new user for manipulation data                          # api.steps.ApiUserStep.hitApiPostCreateNewUserForManipulationData()
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+https://dummyapi.io/data/v1/user/6885acdfc1944b87e2699953
+{&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.951Z&quot;}
+  When hit api update profile user                                                # api.steps.ApiUserStep.hitApiUpdateProfileUserById()
+check status code : 200
+  Then validation status code api user is equals 200                              # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+test logic for check response body update user
+Actual Data : {&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.951Z&quot;}
+Test Data : {&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+  Then validation response body update user                                       # api.steps.ApiUserStep.validationResponseBodyUpdateUser()
+check response data : update_profile_user_normal.json
+  Then validation response json with JSONSchema &quot;update_profile_user_normal.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+
+@api
+Scenario: Test delete user normal                                         # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:45
+Prepare URL : DELETE_USER
+URL is : https://dummyapi.io/data/v1/user/
+  Given prepare url for &quot;DELETE_USER&quot;                                     # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;psmpk5yfee@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;6885ace1c1944b182d69995a&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;psmpk5yfee@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:49.333Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:49.333Z&quot;}
+current id after created : 6885ace1c1944b182d69995a
+  And hit api post create new user for manipulation data                  # api.steps.ApiUserStep.hitApiPostCreateNewUserForManipulationData()
+response after hit API delete
+{&quot;id&quot;:&quot;6885ace1c1944b182d69995a&quot;}
+  When hit api delete user                                                # api.steps.ApiUserStep.hitApiDeleteUserForId()
+check status code : 200
+  Then validation status code api user is equals 200                      # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+test logic for check response body delete user
+id Delete:io.restassured.internal.RestAssuredResponseImpl@38c86702
+  Then validation response body delete user                               # api.steps.ApiUserStep.validationResponseBodyDeleteUser()
+check response data : delete_user_normal.json
+  Then validation response json with JSONSchema &quot;delete_user_normal.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+Final Endpoint : https://dummyapi.io/data/v1/user/6885ace1c1944b182d69995a
+{&quot;error&quot;:&quot;RESOURCE_NOT_FOUND&quot;}
+  Then hit api get profile user after deleted                             # api.steps.ApiUserStep.hitApiGetProfileUserAfterDeleted()
+validation response body profile user process failed
+actual message: RESOURCE_NOT_FOUND
+  Then validation response body with message &quot;RESOURCE_NOT_FOUND&quot;         # api.steps.ApiUserStep.validationResponseBodyFailedWithMessage(java.lang.String)
+
+@api
+Scenario: Test delete user with user id not found                            # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:56
+Prepare URL : DELETE_USER
+URL is : https://dummyapi.io/data/v1/user/
+  Given prepare url for &quot;DELETE_USER&quot;                                        # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
+response after hit API delete
+{&quot;error&quot;:&quot;RESOURCE_NOT_FOUND&quot;}
+  When hit api delete user for id &quot;65bb2c2213492c3665fbd2f2&quot;                 # api.steps.ApiUserStep.hitApiDeleteUserForId(java.lang.String)
+check status code : 404
+  Then validation status code api user is equals 404                         # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
+validation response body profile user process failed
+actual message: RESOURCE_NOT_FOUND
+  Then validation response body with message &quot;RESOURCE_NOT_FOUND&quot;            # api.steps.ApiUserStep.validationResponseBodyFailedWithMessage(java.lang.String)
+check response data : delete_user_not_found.json
+  Then validation response json with JSONSchema &quot;delete_user_not_found.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at 27 Jul 2025, 11.37.30</p>
+</div>
+</div>
+</body>
+</html>

@@ -16,7 +16,7 @@ Proyek ini adalah otomatisasi pengujian pada website [SauceDemo](https://www.sau
 src
 ├── test
 │ ├── java
-│ │ ├── pages
+│ │ ├── web.pages
 │ │ └── steps
 │ └── resources
 │ └── feature

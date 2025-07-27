@@ -237,7 +237,7 @@ allure serve build/allure-results
 
 ### 🤖 Via IDE
 
-Klik kanan pada `TestRunner` → Run
+Klik kanan pada `CucumberTest` → Run
 
 ---
 

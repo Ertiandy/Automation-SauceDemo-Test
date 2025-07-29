@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">15.669s</div>
+<div class="counter">15.317s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,32 +79,32 @@
 </thead>
 <tr>
 <td class="success">User already login and want checkout</td>
-<td class="success">2.638s</td>
+<td class="success">1.914s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">User already login and want checkout all items</td>
-<td class="success">3.166s</td>
+<td class="success">1.828s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">User already login and want checkout but did not input ZipCode</td>
-<td class="success">2.320s</td>
+<td class="success">1.567s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">User already login and want checkout but did not input firstName</td>
-<td class="success">2.614s</td>
+<td class="success">1.592s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">User already login and want checkout but did not input firstName, lastName and ZipCode</td>
-<td class="success">2.333s</td>
+<td class="success">1.599s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">User already login and want checkout but did not input lastName</td>
-<td class="success">2.598s</td>
+<td class="success">6.817s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -114,10 +114,12 @@
 <span class="code">
 <pre>
 @Web @Positive
-Scenario: User already login and want checkout # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:4
+Scenario: User already login and want checkout # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:4
   Given user is already on homepage            # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button            # web.steps.CheckoutStep.userClickAddToCartButton()
   And user click cart icon                     # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button               # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;John&quot;         # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;Doe&quot;           # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -128,10 +130,12 @@ Scenario: User already login and want checkout # file:///C:/Users/ANDI/Downloads
   Then user is on checkout finish page         # web.steps.CheckoutStep.userIsOnCheckoutFinishPage()
 
 @Web @Positive
-Scenario: User already login and want checkout all items # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:18
+Scenario: User already login and want checkout all items # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:18
   Given user is already on homepage                      # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button for each items       # web.steps.CheckoutStep.userClickAddToCartButtonForEachItems()
   And user click cart icon                               # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button                         # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;John&quot;                   # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;Doe&quot;                     # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -142,10 +146,12 @@ Scenario: User already login and want checkout all items # file:///C:/Users/ANDI
   Then user is on checkout finish page                   # web.steps.CheckoutStep.userIsOnCheckoutFinishPage()
 
 @Web @Negative
-Scenario: User already login and want checkout but did not input firstName            # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:32
+Scenario: User already login and want checkout but did not input firstName            # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:32
   Given user is already on homepage                                                   # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button                                                   # web.steps.CheckoutStep.userClickAddToCartButton()
   And user click cart icon                                                            # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button                                                      # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;&quot;                                                    # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;Doe&quot;                                                  # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -154,10 +160,12 @@ Scenario: User already login and want checkout but did not input firstName      
   Then user view error message on page check step one &quot;Error: First Name is required&quot; # web.steps.CheckoutStep.userViewErrorMessageOnPageCheckStepOne(java.lang.String)
 
 @Web @Negative
-Scenario: User already login and want checkout but did not input lastName            # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:44
+Scenario: User already login and want checkout but did not input lastName            # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:44
   Given user is already on homepage                                                  # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button                                                  # web.steps.CheckoutStep.userClickAddToCartButton()
   And user click cart icon                                                           # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button                                                     # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;John&quot;                                               # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;&quot;                                                    # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -166,10 +174,12 @@ Scenario: User already login and want checkout but did not input lastName       
   Then user view error message on page check step one &quot;Error: Last Name is required&quot; # web.steps.CheckoutStep.userViewErrorMessageOnPageCheckStepOne(java.lang.String)
 
 @Web @Negative
-Scenario: User already login and want checkout but did not input ZipCode               # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:56
+Scenario: User already login and want checkout but did not input ZipCode               # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:56
   Given user is already on homepage                                                    # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button                                                    # web.steps.CheckoutStep.userClickAddToCartButton()
   And user click cart icon                                                             # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button                                                       # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;John&quot;                                                 # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;Doe&quot;                                                   # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -178,10 +188,12 @@ Scenario: User already login and want checkout but did not input ZipCode        
   Then user view error message on page check step one &quot;Error: Postal Code is required&quot; # web.steps.CheckoutStep.userViewErrorMessageOnPageCheckStepOne(java.lang.String)
 
 @Web @Negative
-Scenario: User already login and want checkout but did not input firstName, lastName and ZipCode # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/checkout.feature:68
+Scenario: User already login and want checkout but did not input firstName, lastName and ZipCode # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/checkout.feature:68
   Given user is already on homepage                                                              # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click add to cart button                                                              # web.steps.CheckoutStep.userClickAddToCartButton()
   And user click cart icon                                                                       # web.steps.CheckoutStep.userClickCartIcon()
+Checkout visible: true
+Checkout enabled: true
   And user click checkout button                                                                 # web.steps.CheckoutStep.userClickCheckoutButton()
   And user input firstName with &quot;&quot;                                                               # web.steps.CheckoutStep.userInputFirstNameWith(java.lang.String)
   And user input lastName with &quot;&quot;                                                                # web.steps.CheckoutStep.userInputLastNameWith(java.lang.String)
@@ -199,7 +211,7 @@ Scenario: User already login and want checkout but did not input firstName, last
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 27 Jul 2025, 11.37.30</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Jul 29, 2025, 3:11:52 PM</p>
 </div>
 </div>
 </body>

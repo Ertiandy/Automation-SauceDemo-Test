@@ -46,12 +46,27 @@ public class CheckoutPage {
     }
 
     public void ClickCheckoutButton() {
-        WebElement checkoutBtn = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.id ("checkout")
-                )
-        );
-        checkoutBtn.click();
+        try {
+            // Tunggu hingga elemen siap, lalu ambil ulang
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.id("checkout")));
+            WebElement checkoutBtn = driver.findElement(By.id("checkout"));
+
+            System.out.println("Checkout visible: " + checkoutBtn.isDisplayed());
+            System.out.println("Checkout enabled: " + checkoutBtn.isEnabled());
+
+            try {
+                checkoutBtn.click();
+            } catch (Exception e) {
+                System.out.println("Regular click failed, trying JS click...");
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutBtn);
+            }
+
+        } catch (org.openqa.selenium.StaleElementReferenceException stale) {
+            System.out.println("StaleElementReferenceException caught, retrying...");
+            // Retry sekali
+            WebElement checkoutBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout")));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutBtn);
+        }
     }
 
     public void InputFirstName(String firstName) {

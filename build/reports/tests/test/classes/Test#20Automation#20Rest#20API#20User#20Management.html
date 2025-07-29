@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.290s</div>
+<div class="counter">27.147s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,37 +79,37 @@
 </thead>
 <tr>
 <td class="success">Test Get List Data User Normal</td>
-<td class="success">9.640s</td>
+<td class="success">9.217s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test create new user normal</td>
-<td class="success">1.456s</td>
+<td class="success">1.144s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test delete user normal</td>
-<td class="success">2.174s</td>
+<td class="success">1.943s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test delete user with user id not found</td>
-<td class="success">1.290s</td>
+<td class="success">6.202s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test get data profile user failed not found</td>
-<td class="success">1.317s</td>
+<td class="success">5.860s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test get data profile user normal</td>
-<td class="success">1.484s</td>
+<td class="success">1.305s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test update user normal</td>
-<td class="success">1.929s</td>
+<td class="success">1.476s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -119,11 +119,11 @@
 <span class="code">
 <pre>
 @api
-Scenario: Test Get List Data User Normal                                     # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:4
+Scenario: Test Get List Data User Normal                                     # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:4
 Prepare URL : GET_LIST_USERS
 URL is : https://dummyapi.io/data/v1/user
   Given prepare url for &quot;GET_LIST_USERS&quot;                                     # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
-{&quot;data&quot;:[{&quot;id&quot;:&quot;60d0fe4f5311236168a109ca&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Sara&quot;,&quot;lastName&quot;:&quot;Andersen&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/women/58.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cb&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Edita&quot;,&quot;lastName&quot;:&quot;Vestering&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cc&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Adina&quot;,&quot;lastName&quot;:&quot;Barbosa&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/28.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Roberto&quot;,&quot;lastName&quot;:&quot;Vega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/25.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109ce&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Rudi&quot;,&quot;lastName&quot;:&quot;Droste&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/83.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cf&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Carolina&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/5.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d0&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Emre&quot;,&quot;lastName&quot;:&quot;Asikoglu&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/23.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d1&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Kent&quot;,&quot;lastName&quot;:&quot;Brewer&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/52.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d2&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Carlson&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/80.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d3&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Friedrich-Karl&quot;,&quot;lastName&quot;:&quot;Brand&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/7.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d4&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Valentin&quot;,&quot;lastName&quot;:&quot;Ortega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/3.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d5&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Sibylle&quot;,&quot;lastName&quot;:&quot;Leibold&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d6&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Elisa&quot;,&quot;lastName&quot;:&quot;Lorenzo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d7&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Leevi&quot;,&quot;lastName&quot;:&quot;Savela&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/67.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d8&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Karoline&quot;,&quot;lastName&quot;:&quot;Sviggum&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/61.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d9&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Nuria&quot;,&quot;lastName&quot;:&quot;Leon&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/93.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109da&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Lance&quot;,&quot;lastName&quot;:&quot;Foster&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/13.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109db&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Naomi&quot;,&quot;lastName&quot;:&quot;Rodrigues&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/39.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dc&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Roux&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/59.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Miguel&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/31.jpg&quot;}],&quot;total&quot;:327,&quot;page&quot;:0,&quot;limit&quot;:20}
+{&quot;data&quot;:[{&quot;id&quot;:&quot;60d0fe4f5311236168a109ca&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Sara&quot;,&quot;lastName&quot;:&quot;Andersen&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/women/58.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cb&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Edita&quot;,&quot;lastName&quot;:&quot;Vestering&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cc&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Adina&quot;,&quot;lastName&quot;:&quot;Barbosa&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/28.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Roberto&quot;,&quot;lastName&quot;:&quot;Vega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/25.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109ce&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Rudi&quot;,&quot;lastName&quot;:&quot;Droste&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/83.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109cf&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Carolina&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/5.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d0&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Emre&quot;,&quot;lastName&quot;:&quot;Asikoglu&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/23.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d1&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Kent&quot;,&quot;lastName&quot;:&quot;Brewer&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/52.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d2&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Carlson&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/80.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d3&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Friedrich-Karl&quot;,&quot;lastName&quot;:&quot;Brand&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/7.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d4&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Valentin&quot;,&quot;lastName&quot;:&quot;Ortega&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/3.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d5&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Sibylle&quot;,&quot;lastName&quot;:&quot;Leibold&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d6&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Elisa&quot;,&quot;lastName&quot;:&quot;Lorenzo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/89.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d7&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Leevi&quot;,&quot;lastName&quot;:&quot;Savela&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/67.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d8&quot;,&quot;title&quot;:&quot;mrs&quot;,&quot;firstName&quot;:&quot;Karoline&quot;,&quot;lastName&quot;:&quot;Sviggum&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/61.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109d9&quot;,&quot;title&quot;:&quot;ms&quot;,&quot;firstName&quot;:&quot;Nuria&quot;,&quot;lastName&quot;:&quot;Leon&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/93.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109da&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Lance&quot;,&quot;lastName&quot;:&quot;Foster&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/13.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109db&quot;,&quot;title&quot;:&quot;miss&quot;,&quot;firstName&quot;:&quot;Naomi&quot;,&quot;lastName&quot;:&quot;Rodrigues&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/women/39.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dc&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Evan&quot;,&quot;lastName&quot;:&quot;Roux&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/59.jpg&quot;},{&quot;id&quot;:&quot;60d0fe4f5311236168a109dd&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Miguel&quot;,&quot;lastName&quot;:&quot;Lima&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/31.jpg&quot;}],&quot;total&quot;:343,&quot;page&quot;:0,&quot;limit&quot;:20}
   When hit api get list users                                                # api.steps.ApiUserStep.hit_api_get_list_users()
 check status code : 200
   Then validation status code api user is equals 200                         # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
@@ -133,7 +133,7 @@ check response data : get_list_user_success.json
   Then validation response json with JSONSchema &quot;get_list_user_success.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
 
 @api
-Scenario: Test get data profile user normal                             # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:12
+Scenario: Test get data profile user normal                             # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:12
 Prepare URL : GET_PROFILE_USER
 URL is : https://dummyapi.io/data/v1/user/
   Given prepare url for &quot;GET_PROFILE_USER&quot;                              # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
@@ -148,7 +148,7 @@ check response data : get_user_success.json
   Then validation response json with JSONSchema &quot;get_user_success.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
 
 @api
-Scenario: Test get data profile user failed not found                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:20
+Scenario: Test get data profile user failed not found                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:20
 Prepare URL : GET_PROFILE_USER
 URL is : https://dummyapi.io/data/v1/user/
   Given prepare url for &quot;GET_PROFILE_USER&quot;                            # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
@@ -164,64 +164,64 @@ check response data : get_user_error.json
   Then validation response json with JSONSchema &quot;get_user_error.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
 
 @api
-Scenario: Test create new user normal                              # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:28
+Scenario: Test create new user normal                              # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:28
 Prepare URL : CREATE_NEW_USER
 URL is : https://dummyapi.io/data/v1/user/create
   Given prepare url for &quot;CREATE_NEW_USER&quot;                          # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
-Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
-{&quot;id&quot;:&quot;6885acdec1944b8990699950&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;}
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;vozmhh9ki8@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;68888210e181cd54634661a9&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;vozmhh9ki8@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:56.275Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:56.275Z&quot;}
   When hit api post create new user                                # api.steps.ApiUserStep.hitApiPostCreateNewUser()
 check status code : 200
   Then validation status code api user is equals 200               # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
 test logic for check response body create user
-Actual Data : {&quot;id&quot;:&quot;6885acdec1944b8990699950&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:46.018Z&quot;}
-Test Data : {&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;ih9f065yyf@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+Actual Data : {&quot;id&quot;:&quot;68888210e181cd54634661a9&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;vozmhh9ki8@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:56.275Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:56.275Z&quot;}
+Test Data : {&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;vozmhh9ki8@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
   Then validation response body post create new user               # api.steps.ApiUserStep.validationResponseBodyPostCreateNewUser()
 check response data : create_user.json
   Then validation response json with JSONSchema &quot;create_user.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
 
 @api
-Scenario: Test update user normal                                                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:36
+Scenario: Test update user normal                                                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:36
 Prepare URL : UPDATE_USER
 URL is : https://dummyapi.io/data/v1/user/
   Given prepare url for &quot;UPDATE_USER&quot;                                             # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
-Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
-{&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;}
-current id after created : 6885acdfc1944b87e2699953
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;e4jgtdlnbg@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;68888211e181cdd0554661ac&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;e4jgtdlnbg@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:57.361Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:57.361Z&quot;}
+current id after created : 68888211e181cdd0554661ac
   And hit api post create new user for manipulation data                          # api.steps.ApiUserStep.hitApiPostCreateNewUserForManipulationData()
 Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
-https://dummyapi.io/data/v1/user/6885acdfc1944b87e2699953
-{&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.951Z&quot;}
+https://dummyapi.io/data/v1/user/68888211e181cdd0554661ac
+{&quot;id&quot;:&quot;68888211e181cdd0554661ac&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;e4jgtdlnbg@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:57.361Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:57.755Z&quot;}
   When hit api update profile user                                                # api.steps.ApiUserStep.hitApiUpdateProfileUserById()
 check status code : 200
   Then validation status code api user is equals 200                              # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
 test logic for check response body update user
-Actual Data : {&quot;id&quot;:&quot;6885acdfc1944b87e2699953&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;nnczz9ytlc@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:47.560Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:47.951Z&quot;}
+Actual Data : {&quot;id&quot;:&quot;68888211e181cdd0554661ac&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;e4jgtdlnbg@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:57.361Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:57.755Z&quot;}
 Test Data : {&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Update User&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalan jalan&quot;,&quot;city&quot;:&quot;Jakarta Pusat&quot;,&quot;state&quot;:&quot;Jakarta&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
   Then validation response body update user                                       # api.steps.ApiUserStep.validationResponseBodyUpdateUser()
 check response data : update_profile_user_normal.json
   Then validation response json with JSONSchema &quot;update_profile_user_normal.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
 
 @api
-Scenario: Test delete user normal                                         # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:45
+Scenario: Test delete user normal                                         # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:45
 Prepare URL : DELETE_USER
 URL is : https://dummyapi.io/data/v1/user/
   Given prepare url for &quot;DELETE_USER&quot;                                     # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
-Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;psmpk5yfee@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
-{&quot;id&quot;:&quot;6885ace1c1944b182d69995a&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;psmpk5yfee@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-27T04:36:49.333Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-27T04:36:49.333Z&quot;}
-current id after created : 6885ace1c1944b182d69995a
+Gson :{&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;m0eoelcg7c@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;}}
+{&quot;id&quot;:&quot;68888212e181cd93ff4661b3&quot;,&quot;title&quot;:&quot;mr&quot;,&quot;firstName&quot;:&quot;Ertiandy&quot;,&quot;lastName&quot;:&quot;Waluyo&quot;,&quot;picture&quot;:&quot;https://randomuser.me/api/portraits/med/men/95.jpg&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;email&quot;:&quot;m0eoelcg7c@testdata.com&quot;,&quot;dateOfBirth&quot;:&quot;1993-04-09T02:31:57.367Z&quot;,&quot;phone&quot;:&quot;080989999&quot;,&quot;location&quot;:{&quot;street&quot;:&quot;Jalanin aja&quot;,&quot;city&quot;:&quot;Depok&quot;,&quot;state&quot;:&quot;Jawa Barat&quot;,&quot;country&quot;:&quot;Indonesia&quot;,&quot;timezone&quot;:&quot;+7:00&quot;},&quot;registerDate&quot;:&quot;2025-07-29T08:10:58.831Z&quot;,&quot;updatedDate&quot;:&quot;2025-07-29T08:10:58.831Z&quot;}
+current id after created : 68888212e181cd93ff4661b3
   And hit api post create new user for manipulation data                  # api.steps.ApiUserStep.hitApiPostCreateNewUserForManipulationData()
 response after hit API delete
-{&quot;id&quot;:&quot;6885ace1c1944b182d69995a&quot;}
+{&quot;id&quot;:&quot;68888212e181cd93ff4661b3&quot;}
   When hit api delete user                                                # api.steps.ApiUserStep.hitApiDeleteUserForId()
 check status code : 200
   Then validation status code api user is equals 200                      # api.steps.ApiUserStep.validation_status_code_is_equals(java.lang.Integer)
 test logic for check response body delete user
-id Delete:io.restassured.internal.RestAssuredResponseImpl@38c86702
+id Delete:io.restassured.internal.RestAssuredResponseImpl@4e71c196
   Then validation response body delete user                               # api.steps.ApiUserStep.validationResponseBodyDeleteUser()
 check response data : delete_user_normal.json
   Then validation response json with JSONSchema &quot;delete_user_normal.json&quot; # api.steps.ApiUserStep.validation_response_json_with_json_schema(java.lang.String)
-Final Endpoint : https://dummyapi.io/data/v1/user/6885ace1c1944b182d69995a
+Final Endpoint : https://dummyapi.io/data/v1/user/68888212e181cd93ff4661b3
 {&quot;error&quot;:&quot;RESOURCE_NOT_FOUND&quot;}
   Then hit api get profile user after deleted                             # api.steps.ApiUserStep.hitApiGetProfileUserAfterDeleted()
 validation response body profile user process failed
@@ -229,7 +229,7 @@ actual message: RESOURCE_NOT_FOUND
   Then validation response body with message &quot;RESOURCE_NOT_FOUND&quot;         # api.steps.ApiUserStep.validationResponseBodyFailedWithMessage(java.lang.String)
 
 @api
-Scenario: Test delete user with user id not found                            # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/api/apiuser.feature:56
+Scenario: Test delete user with user id not found                            # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/api/apiuser.feature:56
 Prepare URL : DELETE_USER
 URL is : https://dummyapi.io/data/v1/user/
   Given prepare url for &quot;DELETE_USER&quot;                                        # api.steps.ApiUserStep.prepare_url_for(java.lang.String)
@@ -254,7 +254,7 @@ check response data : delete_user_not_found.json
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 27 Jul 2025, 11.37.30</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Jul 29, 2025, 3:11:52 PM</p>
 </div>
 </div>
 </body>

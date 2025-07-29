@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">12.697s</div>
+<div class="counter">19.855s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,37 +79,37 @@
 </thead>
 <tr>
 <td class="success">Boundary login (empty username and password)</td>
-<td class="success">1.625s</td>
+<td class="success">1.194s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with invalid username and password</td>
-<td class="success">1.936s</td>
+<td class="success">6.412s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with invalid username and valid password</td>
-<td class="success">1.931s</td>
+<td class="success">1.399s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with valid user</td>
-<td class="success">2.108s</td>
+<td class="success">1.358s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with valid username and empty password #1</td>
-<td class="success">1.682s</td>
+<td class="success">1.364s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with valid username and empty password #2</td>
-<td class="success">1.718s</td>
+<td class="success">6.589s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with valid username and invalid password</td>
-<td class="success">1.697s</td>
+<td class="success">1.539s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -119,7 +119,7 @@
 <span class="code">
 <pre>
 @Web @Positif
-Scenario: Login with valid user                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:5
+Scenario: Login with valid user                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:5
 ChromeDriver has been set up
   Given user is on login page                   # web.steps.LoginStep.userIsOnLoginPage()
   When user input username with &quot;standard_user&quot; # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -128,7 +128,7 @@ ChromeDriver has been set up
   Then user is on homepage                      # web.steps.LoginStep.userIsOnHomepage()
 
 @Web @Negative
-Scenario: Login with invalid username and password                                                                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:13
+Scenario: Login with invalid username and password                                                                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:13
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;invalid_user&quot;                                                                      # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -137,7 +137,7 @@ ChromeDriver has been set up
   Then user view message on login page &quot;Epic sadface: Username and password do not match any user in this service&quot; # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and invalid password                                                           # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:22
+Scenario: Login with valid username and invalid password                                                           # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:22
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;standard_user&quot;                                                                     # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -146,7 +146,7 @@ ChromeDriver has been set up
   Then user view message on login page &quot;Epic sadface: Username and password do not match any user in this service&quot; # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with invalid username and valid password                                                           # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:30
+Scenario: Login with invalid username and valid password                                                           # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:30
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;username&quot;                                                                          # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -155,7 +155,7 @@ ChromeDriver has been set up
   Then user view message on login page &quot;Epic sadface: Username and password do not match any user in this service&quot; # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and empty password                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:38
+Scenario: Login with valid username and empty password                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:38
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;standard_user&quot;                              # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -164,7 +164,7 @@ ChromeDriver has been set up
   Then user view message on login page &quot;Epic sadface: Password is required&quot; # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and empty password                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:46
+Scenario: Login with valid username and empty password                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:46
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;&quot;                                           # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -173,7 +173,7 @@ ChromeDriver has been set up
   Then user view message on login page &quot;Epic sadface: Username is required&quot; # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Boundary login (empty username and password)                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:54
+Scenario: Boundary login (empty username and password)                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:54
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with &quot;&quot;                                           # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -191,7 +191,7 @@ ChromeDriver has been set up
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 27 Jul 2025, 11.37.30</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Jul 29, 2025, 3:11:52 PM</p>
 </div>
 </div>
 </body>

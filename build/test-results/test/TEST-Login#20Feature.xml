@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login Feature" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-07-27T04:37:09" hostname="DESKTOP-5BCF7EP" time="12.698">
+<testsuite name="Login Feature" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-07-29T08:11:21" hostname="PCLAP0009.local" time="19.855">
   <properties/>
-  <testcase name="Login with valid user" classname="Login Feature" time="2.108"/>
-  <testcase name="Login with invalid username and password" classname="Login Feature" time="1.936"/>
-  <testcase name="Login with valid username and invalid password" classname="Login Feature" time="1.697"/>
-  <testcase name="Login with invalid username and valid password" classname="Login Feature" time="1.931"/>
-  <testcase name="Login with valid username and empty password #1" classname="Login Feature" time="1.682"/>
-  <testcase name="Login with valid username and empty password #2" classname="Login Feature" time="1.718"/>
-  <testcase name="Boundary login (empty username and password)" classname="Login Feature" time="1.625"/>
+  <testcase name="Login with valid user" classname="Login Feature" time="1.358"/>
+  <testcase name="Login with invalid username and password" classname="Login Feature" time="6.412"/>
+  <testcase name="Login with valid username and invalid password" classname="Login Feature" time="1.539"/>
+  <testcase name="Login with invalid username and valid password" classname="Login Feature" time="1.399"/>
+  <testcase name="Login with valid username and empty password #1" classname="Login Feature" time="1.364"/>
+  <testcase name="Login with valid username and empty password #2" classname="Login Feature" time="6.589"/>
+  <testcase name="Boundary login (empty username and password)" classname="Login Feature" time="1.194"/>
   <system-out><![CDATA[
 @Web @Positif
-Scenario: Login with valid user                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:5
+Scenario: Login with valid user                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:5
 ChromeDriver has been set up
   Given user is on login page                   # web.steps.LoginStep.userIsOnLoginPage()
   When user input username with "standard_user" # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -19,7 +19,7 @@ ChromeDriver has been set up
   Then user is on homepage                      # web.steps.LoginStep.userIsOnHomepage()
 
 @Web @Negative
-Scenario: Login with invalid username and password                                                                 # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:13
+Scenario: Login with invalid username and password                                                                 # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:13
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with "invalid_user"                                                                      # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -28,7 +28,7 @@ ChromeDriver has been set up
   Then user view message on login page "Epic sadface: Username and password do not match any user in this service" # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and invalid password                                                           # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:22
+Scenario: Login with valid username and invalid password                                                           # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:22
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with "standard_user"                                                                     # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -37,7 +37,7 @@ ChromeDriver has been set up
   Then user view message on login page "Epic sadface: Username and password do not match any user in this service" # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with invalid username and valid password                                                           # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:30
+Scenario: Login with invalid username and valid password                                                           # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:30
 ChromeDriver has been set up
   Given user is on login page                                                                                      # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with "username"                                                                          # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -46,7 +46,7 @@ ChromeDriver has been set up
   Then user view message on login page "Epic sadface: Username and password do not match any user in this service" # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and empty password                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:38
+Scenario: Login with valid username and empty password                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:38
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with "standard_user"                              # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -55,7 +55,7 @@ ChromeDriver has been set up
   Then user view message on login page "Epic sadface: Password is required" # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Login with valid username and empty password                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:46
+Scenario: Login with valid username and empty password                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:46
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with ""                                           # web.steps.LoginStep.userInputUsernameWith(java.lang.String)
@@ -64,7 +64,7 @@ ChromeDriver has been set up
   Then user view message on login page "Epic sadface: Username is required" # web.steps.LoginStep.userViewMessageOnLoginPage(java.lang.String)
 
 @Web @Negative
-Scenario: Boundary login (empty username and password)                      # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/login.feature:54
+Scenario: Boundary login (empty username and password)                      # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/login.feature:54
 ChromeDriver has been set up
   Given user is on login page                                               # web.steps.LoginStep.userIsOnLoginPage()
   And user input username with ""                                           # web.steps.LoginStep.userInputUsernameWith(java.lang.String)

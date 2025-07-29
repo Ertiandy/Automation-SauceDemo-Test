@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sorting" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-07-27T04:37:21" hostname="DESKTOP-5BCF7EP" time="8.485">
+<testsuite name="Sorting" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-07-29T08:11:41" hostname="PCLAP0009.local" time="11.105">
   <properties/>
-  <testcase name="User already login and sorting items #1" classname="Sorting" time="2.24"/>
-  <testcase name="User already login and sorting items #2" classname="Sorting" time="2.192"/>
-  <testcase name="User already login and sorting items #3" classname="Sorting" time="2.03"/>
-  <testcase name="User already login and sorting items #4" classname="Sorting" time="2.023"/>
+  <testcase name="User already login and sorting items #1" classname="Sorting" time="1.497"/>
+  <testcase name="User already login and sorting items #2" classname="Sorting" time="1.424"/>
+  <testcase name="User already login and sorting items #3" classname="Sorting" time="6.755"/>
+  <testcase name="User already login and sorting items #4" classname="Sorting" time="1.429"/>
   <system-out><![CDATA[
 @Web @Positive
-Scenario Outline: User already login and sorting items # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/sorting.feature:10
+Scenario Outline: User already login and sorting items # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/sorting.feature:10
   Given user is already on homepage                    # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click filter "az"                           # web.steps.SortingStep.userClickFilter(java.lang.String)
   Then then product filtered "az"                      # web.steps.SortingStep.thenProductFiltered(java.lang.String)
 
 @Web @Positive
-Scenario Outline: User already login and sorting items # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/sorting.feature:11
+Scenario Outline: User already login and sorting items # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/sorting.feature:11
   Given user is already on homepage                    # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click filter "za"                           # web.steps.SortingStep.userClickFilter(java.lang.String)
   Then then product filtered "za"                      # web.steps.SortingStep.thenProductFiltered(java.lang.String)
 
 @Web @Positive
-Scenario Outline: User already login and sorting items # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/sorting.feature:12
+Scenario Outline: User already login and sorting items # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/sorting.feature:12
   Given user is already on homepage                    # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click filter "lohi"                         # web.steps.SortingStep.userClickFilter(java.lang.String)
   Then then product filtered "lohi"                    # web.steps.SortingStep.thenProductFiltered(java.lang.String)
 
 @Web @Positive
-Scenario Outline: User already login and sorting items # file:///C:/Users/ANDI/Downloads/Web-API_FinalProjectAutomation/src/test/resources/feature/web/sorting.feature:13
+Scenario Outline: User already login and sorting items # file:///Users/ertiandywaluyo/Downloads/FinalProject-Automation/src/test/resources/feature/web/sorting.feature:13
   Given user is already on homepage                    # web.steps.CheckoutStep.userIsAlreadyOnHomepage()
   And user click filter "hilo"                         # web.steps.SortingStep.userClickFilter(java.lang.String)
   Then then product filtered "hilo"                    # web.steps.SortingStep.thenProductFiltered(java.lang.String)

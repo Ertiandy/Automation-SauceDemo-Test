@@ -143,64 +143,54 @@ Folder utama untuk menyimpan semua kode dan resource pengujian (testing).
 Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
 
 1. 📂 api → Automation Test untuk API
-📁 client
-Tujuan: Menyimpan class untuk memanggil endpoint API menggunakan Rest Assured.
+📁 client : Menyimpan class untuk memanggil endpoint API menggunakan Rest Assured.
 
 Contoh:
 ApiClient.java: Fungsi getUserById(), createUser(), dll.
 
-📁 data
-Tujuan: Menyediakan test data atau data dummy untuk request API.
+📁 data : Menyediakan test data atau data dummy untuk request API.
 
 Contoh:
 UserData.java: Static data user untuk create/update.
 
-📁 helper
-Tujuan: Menyediakan helper function untuk API testing.
+📁 helper : Menyediakan helper function untuk API testing.
 
 Contoh:
 JsonSchemaValidatorHelper.java: Validasi response JSON dengan schema.
 
-📁 pojo
-Tujuan: POJO (Plain Old Java Object) untuk memetakan request/response body JSON.
+📁 pojo : POJO (Plain Old Java Object) untuk memetakan request/response body JSON.
 
 Contoh:
 CreateUserRequest.java, UpdateUserRequest.java
 
-📁 steps
-Tujuan: Step definition untuk skenario Cucumber API.
+📁 steps : Step definition untuk skenario Cucumber API.
 
 Contoh:
 ApiUserStep.java: Implementasi langkah-langkah seperti Given, When, Then.
 
-📁 utils
-Tujuan: Reusable utility class.
+📁 utils : Reusable utility class.
 
 Contoh:
 ScenarioContext.java: Menyimpan data antar step selama eksekusi.
 
 2. 📂 web → Automation Test untuk Web UI (Selenium)
-📁 pages
-Tujuan: Page Object Model (POM), menyimpan semua locators & action di halaman.
+📁 pages : Page Object Model (POM), menyimpan semua locators & action di halaman.
 
 Contoh:
 LoginPage.java, CheckoutPage.java, SortingPage.java
 
-📁 steps
-Tujuan: Step definition untuk skenario Cucumber Web UI.
+📁 steps : Step definition untuk skenario Cucumber Web UI.
 
 Contoh:
 LoginStep.java, CheckoutStep.java, SortingStep.java
 
-3. 📁 hooks
-Tujuan: Inisialisasi sebelum dan sesudah test.
+3. 📁 hooks : Inisialisasi sebelum dan sesudah test.
 
 Contoh:
 Hooks.java: Inisialisasi dan teardown WebDriver.
 
 📂 resources
-📁 feature
-Tujuan: Menyimpan file skenario Cucumber .feature.
+📁 feature : Menyimpan file skenario Cucumber .feature.
 
 📂 web
 - login.feature: Test login positif & negatif.
@@ -210,8 +200,7 @@ Tujuan: Menyimpan file skenario Cucumber .feature.
 📂 api
 user.feature: Test Get, Create, Update, Delete user.
 
-📁 schema
-Tujuan: Menyimpan file JSON Schema untuk validasi response API.
+📁 schema : Menyimpan file JSON Schema untuk validasi response API.
 
 Contoh:
 - get_users_schema.json
@@ -245,24 +234,32 @@ Klik kanan pada `CucumberTest` → Run
 
 ### Web: SauceDemo
 
-1. Standard login
-2. Invalid login
-3. Boundary login
-4. Sorting by Price (low to high)
-5. Sorting by Price (high to low)
-6. Sorting by Name (A to Z)
-7. Sorting by Name (Z to A)
-8. Checkout - Add to cart
-9. Checkout - Fill customer info
-10. Checkout - Finish purchase
+1. Login with valid user
+2. Login with invalid username and password
+3. Login with valid username and invalid password
+4. Login with invalid username and valid password
+5. Login with valid username and empty password
+6. Login with empty username and valid password
+7. Boundary login (empty username and password)
+8. User already login and want checkout
+9. User already login and want checkout all items
+10. Checkout but did not input firstName
+11. Checkout but did not input lastName
+12. Checkout but did not input ZipCode
+13. Checkout but did not input firstName, lastName, and ZipCode
+14. User already login and sorting items (Asc to Desc, Desc to Asc, High to Low, Low to High)
+15. 
+
 
 ### API: DummyAPI.io
 
-1. Get All Users (valid & invalid)
-2. Get User by ID (valid & not found)
-3. Create User
-4. Update User by ID
-5. Delete User by ID
+1. Test Get List Data User Normal
+2. Test get data profile user normal
+3. Test get data profile user failed not found
+4. Test create new user normal
+5. Test update user normal
+6. Test delete user normal
+7. Test delete user with user id not found
 
 ---
 
@@ -287,8 +284,8 @@ Pipeline berjalan otomatis setiap ada perubahan pada branch `main`. Tahapan:
 
 ## 👨‍💼 Author
 
-> **Ertiandy Waluyo**
-> Calon QA Engineer
+**Ertiandy Waluyo**
+Calon QA Engineer
 
 ---
 

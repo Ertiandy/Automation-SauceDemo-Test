@@ -139,6 +139,7 @@ Penjelasan:
 📁 src/test
 Folder utama untuk menyimpan semua kode dan resource pengujian (testing).
 
+
 📂 java
 Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
 
@@ -148,25 +149,30 @@ Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
 Contoh:
 ApiClient.java: Fungsi getUserById(), createUser(), dll.
 
+
 📁 data : Menyediakan test data atau data dummy untuk request API.
 
 Contoh:
 UserData.java: Static data user untuk create/update.
+
 
 📁 helper : Menyediakan helper function untuk API testing.
 
 Contoh:
 JsonSchemaValidatorHelper.java: Validasi response JSON dengan schema.
 
+
 📁 pojo : POJO (Plain Old Java Object) untuk memetakan request/response body JSON.
 
 Contoh:
 CreateUserRequest.java, UpdateUserRequest.java
 
+
 📁 steps : Step definition untuk skenario Cucumber API.
 
 Contoh:
 ApiUserStep.java: Implementasi langkah-langkah seperti Given, When, Then.
+
 
 📁 utils : Reusable utility class.
 
@@ -174,10 +180,12 @@ Contoh:
 ScenarioContext.java: Menyimpan data antar step selama eksekusi.
 
 2. 📂 web → Automation Test untuk Web UI (Selenium)
+
 📁 pages : Page Object Model (POM), menyimpan semua locators & action di halaman.
 
 Contoh:
 LoginPage.java, CheckoutPage.java, SortingPage.java
+
 
 📁 steps : Step definition untuk skenario Cucumber Web UI.
 
@@ -189,16 +197,20 @@ LoginStep.java, CheckoutStep.java, SortingStep.java
 Contoh:
 Hooks.java: Inisialisasi dan teardown WebDriver.
 
+
 📂 resources
 📁 feature : Menyimpan file skenario Cucumber .feature.
+
 
 📂 web
 - login.feature: Test login positif & negatif.
 - checkout.feature: Test checkout (lengkap atau error).
 - sorting.feature: Test sorting item.
 
+
 📂 api
 user.feature: Test Get, Create, Update, Delete user.
+
 
 📁 schema : Menyimpan file JSON Schema untuk validasi response API.
 

@@ -136,88 +136,54 @@ src
 
 Penjelasan:
 
-📁 src/test
-Folder utama untuk menyimpan semua kode dan resource pengujian (testing).
+📁 src/test : Folder utama untuk menyimpan semua kode dan resource pengujian (testing).
+
+- 📂 java : Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
+
+	*	📂 api : Automation Test untuk API
+		
+		* 📁 client : Menyimpan class untuk memanggil endpoint API menggunakan Rest Assured. Contoh : ApiClient.java: Fungsi getUserById(), createUser(), dll.
+  
+  	* 📁 data : Menyediakan test data atau data dummy untuk request API. Contoh : UserData.java: Static data user untuk create/update.
+  	
+  	* 📁 helper : Menyediakan helper function untuk API testing. Contoh : JsonSchemaValidatorHelper.java: Validasi response JSON dengan schema.
+  	
+  	* 📁 pojo : POJO (Plain Old Java Object) untuk memetakan request/response body JSON. Contoh : CreateUserRequest.java, UpdateUserRequest.java
+  	
+  	* 📁 steps : Step definition untuk skenario Cucumber API. Contoh : ApiUserStep.java: Implementasi langkah-langkah seperti Given, When, Then.
+  	
+  	* 📁 utils : Reusable utility class. Contoh : ScenarioContext.java: Menyimpan data antar step selama eksekusi.
 
 
-📂 java
-Berisi seluruh kode Java untuk pengujian. Dibagi menjadi dua bagian besar:
-
-1. 📂 api → Automation Test untuk API
-📁 client : Menyimpan class untuk memanggil endpoint API menggunakan Rest Assured.
-
-Contoh:
-ApiClient.java: Fungsi getUserById(), createUser(), dll.
+	* 📂 web = Automation Test untuk Web UI (Selenium)
+ 
+ 		* 📁 pages : Page Object Model (POM), menyimpan semua locators & action di halaman. Contoh : LoginPage.java, CheckoutPage.java, SortingPage.java
+   
+   	* 📁 steps : Step definition untuk skenario Cucumber Web UI. Contoh : LoginStep.java, CheckoutStep.java, SortingStep.java
 
 
-📁 data : Menyediakan test data atau data dummy untuk request API.
-
-Contoh:
-UserData.java: Static data user untuk create/update.
+	* 📁 hooks : Inisialisasi sebelum dan sesudah test. Contoh : Hooks.java: Inisialisasi dan teardown WebDriver.
 
 
-📁 helper : Menyediakan helper function untuk API testing.
+- 📂 resources
 
-Contoh:
-JsonSchemaValidatorHelper.java: Validasi response JSON dengan schema.
+  *	📁 feature : Menyimpan file skenario Cucumber .feature.
+  
+  	*	📂 web
+  		*	login.feature: Test login positif & negatif.
+    	*	checkout.feature: Test checkout (lengkap atau error).
+     	*	sorting.feature: Test sorting item.
 
-
-📁 pojo : POJO (Plain Old Java Object) untuk memetakan request/response body JSON.
-
-Contoh:
-CreateUserRequest.java, UpdateUserRequest.java
-
-
-📁 steps : Step definition untuk skenario Cucumber API.
-
-Contoh:
-ApiUserStep.java: Implementasi langkah-langkah seperti Given, When, Then.
+   	* 📂 api
+    	* user.feature: Test Get, Create, Update, Delete user.
 
 
-📁 utils : Reusable utility class.
+	* 📁 schema : Menyimpan file JSON Schema untuk validasi response API.
 
-Contoh:
-ScenarioContext.java: Menyimpan data antar step selama eksekusi.
-
-2. 📂 web → Automation Test untuk Web UI (Selenium)
-
-📁 pages : Page Object Model (POM), menyimpan semua locators & action di halaman.
-
-Contoh:
-LoginPage.java, CheckoutPage.java, SortingPage.java
-
-
-📁 steps : Step definition untuk skenario Cucumber Web UI.
-
-Contoh:
-LoginStep.java, CheckoutStep.java, SortingStep.java
-
-3. 📁 hooks : Inisialisasi sebelum dan sesudah test.
-
-Contoh:
-Hooks.java: Inisialisasi dan teardown WebDriver.
-
-
-📂 resources
-📁 feature : Menyimpan file skenario Cucumber .feature.
-
-
-📂 web
-- login.feature: Test login positif & negatif.
-- checkout.feature: Test checkout (lengkap atau error).
-- sorting.feature: Test sorting item.
-
-
-📂 api
-user.feature: Test Get, Create, Update, Delete user.
-
-
-📁 schema : Menyimpan file JSON Schema untuk validasi response API.
-
-Contoh:
-- get_users_schema.json
-- create_user_schema.json
-- update_user_schema.json
+		* Contoh:
+			* get_users_schema.json
+			* create_user_schema.json
+			* update_user_schema.json
 
 ---
 
@@ -260,7 +226,6 @@ Klik kanan pada `CucumberTest` → Run
 12. Checkout but did not input ZipCode
 13. Checkout but did not input firstName, lastName, and ZipCode
 14. User already login and sorting items (Asc to Desc, Desc to Asc, High to Low, Low to High)
-15. 
 
 
 ### API: DummyAPI.io
